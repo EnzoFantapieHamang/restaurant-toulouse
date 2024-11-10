@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900');
+
+/* Général */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Playfair Display', 'sans-serif';
+    height: 100vh;
+    background-image: url(img/fromage.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+html{
+    font-size: 18px;
+}
+
+h1{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 1.3em;
+}
+
+button{
+    font-size: 0.7em;
+}
+
+p{
+    font-size: 0.8em;
+}
+
+
+
+
+.ligne-separation-un{
+    width: 40px;
+    height: 1px;
+    background-color: black;
+}
+
+.ligne-separation-deux{
+    width: 40px;
+    height: 1px;
+    background-color: white;
+}
+
+button{
+    cursor: pointer;
+}
+
+ul{
+    list-style-type: none;
+}
+
+span.grey{
+    color: grey;
+}
+
+span.white{
+    color: white;
+}
+
+
+
+
+/* Header */
+
+header{
+    top: 0;
+    width: 100%;
+    display: flex;
+    height: 12vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: white;
+    position: fixed;
+    box-shadow: 0 0.1px 30px lightgrey;
+}
+
+header > img{
+    height: 60%;
+}
+
+header > nav > ul{
+    display: flex;
+    align-items: center;
+}
+
+header > nav > ul > li{
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+#reserver{
+    border: 1px solid black;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    transition: 0.4s;
+}
+
+#reserver:hover{
+    background-color: white;
+    color: black;
+    transition: 0.4s;
+}
+
+#languages-select{
+    border: 1px solid black;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+#languages-select:hover{
+    color: white;
+    background-color: black;
+    transition: 0.4s;
+}
+
+
+
+
+
+/* Accueil */
+
+.accueil{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.accueil span{
+    word-spacing: 1rem;
+}
+
+.accueil button{
+    padding: 7px 35px;
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    transition: 0.4s;
+}
+
+.accueil button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.4s;
+}
+
+
+
+
+
+
+
+/* Infos */
+
+.infos{
+    height: 160vh;
+    background-color: white;
+    padding: 12% 20%;
+}
+
+.un{
+    display: flex;
+    height: 58%;
+}
+
+.deux{
+    display: flex;
+    align-items: center;
+    height: 42%;
+}
+
+.image img{
+    width: 400px;
+    box-shadow: 6px 6px 6px grey;
+}
+
+.infos-pratiques{
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    text-align: center;
+}
+
+.infos-pratiques > *{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.horaires{
+    width: 50%;
+    height: 70%;
+    border: 1px solid black;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.horaires > *{
+    margin: 5px;
+}
+
+.horaires-display{
+    display: flex;
+    align-items: center;
+    border-bottom: dotted 1px lightgrey;
+    width: 85%;
+    padding: 8px 0;
+    justify-content: space-between;
+}
+
+.image, .titre, .infos-pratiques{
+    width: 50%;
+}
+
+
+
+
+
+
+
+/* Newsletter */
+
+.newsletter{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.newsletter > *{
+    margin: 20px;
+}
+
+.newsletter p{
+    width: 30%;
+}
+
+.newsletter button{
+    padding: 10px 50px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+}
+
+.newsletter button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Photos */
+
+.photos {
+    height: 140vh; 
+    background-color: white;
+    padding: 10% 15%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.container {
+    flex-grow: 1; 
+    display: flex; 
+}
+
+.container > div{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container > div > div{
+    margin: 20px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.container > div > div > img{
+    width: 300px;
+    object-fit: cover;
+}
+
+.photos button{
+    padding: 10px 0;
+    margin: 0 15%;
+    width: 70%;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+}
+
+.photos button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.4s;
+}
+
+.marge{
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+/* Contact */
+
+.contact{
+    height: 70vh;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 25%;
+}
+
+.contact > *{
+    margin: 10px;
+}
+
+form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+form > *{
+    margin: 10px;
+}
+
+form > div{
+    display: flex;
+}
+
+form > div > *{
+    flex-grow: 1;
+    padding: 10px;
+    gap: 10px;
+}
+
+
+input[type="submit"]{
+    padding: 10px 50px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+}
+
+input[type="submit"]:hover{
+    background-color: white;
+    color: black;
+    transition: 0.4s;
+}
+
+
+
+
+
+
+/* Map */
+
+.map{
+    height: 50vh;
+    overflow: hidden;
+}
+
+
+
+
+/* Footer */
+
+footer{
+    color: white;
+    height: 30vh;
+    background-color: black;
+    padding: 0 15%;
+    display: flex;
+}
+
+footer > div{
+    flex-grow: 1;
+    padding: 3% 0;
+}
+
+footer > div > * {
+    margin: 20px;
+}
+
+.white{
+    border: 1px solid white;
+    padding: 10px 20px;
+    color: black;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.white:hover{
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+}

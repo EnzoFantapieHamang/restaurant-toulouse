@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Le Versant Toulouse | Restaurant</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo du restaurant">
+        <nav>
+            <ul>
+                <li>Photos</li>
+                <li>Presse</li>
+                <li>Accès/Contact</li>
+                <li>
+                    <button id="reserver">Réserver</button>
+                </li>
+                <li>
+                    <select name="languages" id="languages-select">
+                        <option value="FR">FR</option>
+                        <option value="EN">EN</option>
+                        <option value="ES">ES</option>
+                        <option value="IT">IT</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="accueil">
+        <span>Néo-Bistrot Toulouse</span>
+        <h1>Le versant Toulouse</h1>
+        <button>Réserver</button>
+    </section>
+
+    <section class="infos">
+        <div class="un">
+            <div class="image">
+                <img src="img/gateau.jpg" alt="">
+            </div>
+            <div class="titre">
+                <span class="grey">Le versant Toulouse | Toulouse</span>
+            </div>
+        </div>
+        <div class="deux">
+            <div class="infos-pratiques">
+                <h3>Infos Pratiques</h3>
+                <div class="ligne-separation-un"></div>
+                <div>
+                    <span class="grey">Cuisine</span>
+                    <p>Fromages, Cuisine créative, Cuisine Moderne, Tapas, Fondue, Française traditionnelle créative , Gastronomique, Traditionnelle Savoyarde, Raclette, Cuisine Française Moderne</p>
+                </div>
+                <div>
+                    <span class="grey">Type de restaurant</span>
+                    <p>Néo-bistrot</p>
+                </div>
+                <div>
+                    <span class="grey">Moyens de paiement</span>
+                    <p>Carte Bleue, Chèques, Chèques Vacances, Visa, Maestro, Espèces, Titres restaurant, Eurocard/Mastercard, Paiement Sans Contact, Cheque Sodexo, Ticket Restaurant, Apple Pay, Sans Contact, Paiement mobile, Ticket restaurant dématérialisé, Carte bancaire, Pluxee</p>
+                </div>
+            </div>
+            <div class="horaires">
+                <h3>Horaires</h3>
+                <div class="ligne-separation-un"></div>
+                <div class="horaires-display">
+                    <span class="grey">Lun - Mar</span>
+                    <p>12h00 - 14h00 • 19h00 - 22h00</p>
+                </div>
+                <div class="horaires-display">
+                    <span class="grey">Mercredi</span>
+                    <p>11h00 - 22h00</p>
+                </div>
+                <div class="horaires-display">
+                    <span class="grey">Jeudi</span>
+                    <p>12h00 - 14h00 • 19h00 - 22h00</p>
+                </div>
+                <div class="horaires-display">
+                    <span class="grey">Ven - Sam</span>
+                    <p>12h00 - 14h00 • 19h00 - 23h00</p>
+                </div>
+                <div class="horaires-display">
+                    <span class="grey">Dimanche</span>
+                    <p>12h00 - 14h00 • 19h00 - 22h00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <h3>Newsletter *</h3>
+        <p>En vous inscrivant à notre newsletter vous acceptez de recevoir des communications et offres marketing personnalisées par mail de notre part.</p>
+        <button>s'abonner</button>
+    </section>
+
+    <section class="photos">
+        <h3>Photos</h3>
+        <div class="container">
+            <div class="marge">
+                <div>
+                    <img src="img/gateau.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/table.jpg" alt="">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="img/pizza-deux.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/cuisinier.jpg" alt="">
+                </div>
+                <button>Voir toutes nos photos</button>
+            </div>
+            <div class="marge">
+                <div>
+                    <img src="img/pates.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/restau.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="contact">
+        <h3>Nous contacter</h3>
+        <div class="ligne-separation-un"></div>
+        <p>Vous désirez nous contacter ?</p>
+        <p>Remplissez le formulaire ci-dessous !</p>
+        <form action="" method="">
+            <div>
+                <input type="text" name="prenom" id="prenom" placeholder="Prenom">
+                <input type="text" name="nom" id="nom" placeholder="Nom">
+            </div>
+            <div>
+                <input type="email" id="email" placeholder="Votre adresse Email">
+                <input type="text" name="telephone" id="telephone" placeholder="telephone">
+            </div>
+            <textarea name="message" id="message" rows="8" placeholder="Message"></textarea>
+            <input type="submit" value="envoyer">
+        </form>
+    </section>
+
+    <section class="map">
+        <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=47%20rue%20de%20Metz,%2031000%20Toulouse+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps vehicle tracker</a></iframe></div>
+    </section>
+
+    <footer>
+        <div>
+            <h4>LE VERSANT TOULOUSE</h4>
+            <p>47 Rue de Metz, 31000 Toulouse</p>
+            <p>05 18 22 01 67</p>
+        </div>
+        <div>
+            <h5>Réservation</h5>
+            <div class="ligne-separation-deux"></div>
+            <button class="white">Réserver</button>
+        </div>
+        <div>
+            <h5>Nous suivre</h5>
+            <div class="ligne-separation-deux"></div>
+            <div>
+                <button class="black"><i class="fa-brands fa-square-facebook"></i></button>
+                <button class="black"><i class="fa-brands fa-square-instagram"></i></button>
+            </div>
+            <button class="white">Newsletter</button>
+        </div>
+        <div>
+            <h5>Distinctions</h5>
+            <div class="ligne-separation-deux"></div>
+            <i class="fa-solid fa-house"></i>
+        </div>
+    </footer>
+</body>
+</html>
