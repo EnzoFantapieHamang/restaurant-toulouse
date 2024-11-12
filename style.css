@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900');
 
-/* Général */
-
+/* GENERAL */
 *{
     margin: 0;
     padding: 0;
@@ -15,34 +14,36 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
-
-
-
-
+/* police */
 html{
     font-size: 18px;
 }
 
 h1{
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: bold;
 }
 
 h3{
-    font-size: 1.3em;
+    font-size: 1.6rem;
 }
 
-button{
-    font-size: 0.7em;
+h4{
+    font-size: 1.3rem
+}
+
+h5{
+    font-size: 1.1rem;
+}
+
+li, button, option{
+    font-size: 1rem;
 }
 
 p{
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
-
-
-
-
+/* elements */
 .ligne-separation-un{
     width: 40px;
     height: 1px;
@@ -70,12 +71,26 @@ span.grey{
 span.white{
     color: white;
 }
+/* responsive */
+@media (max-width: 1000px){
+    .ligne-separation-un, .ligne-separation-deux{
+        width: 30px;
+    }
+
+    html{
+        font-size: 15px;
+    }
+}
+
+
+
+
+
 
 
 
 
 /* Header */
-
 header{
     top: 0;
     width: 100%;
@@ -88,6 +103,7 @@ header{
     position: fixed;
     box-shadow: 0 0.1px 30px lightgrey;
 }
+
 
 header > img{
     height: 60%;
@@ -129,6 +145,32 @@ header > nav > ul > li{
     transition: 0.4s;
 }
 
+.menu{
+    height: 6vh;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu > div{
+    height: 20%;
+    margin: 10px;
+    background-color: black;
+}
+
+@media (max-width: 1000px){
+    nav ul{
+        display: none !important;
+    }
+    
+}
+
+@media (min-width: 1000px){
+    nav .menu{
+        display: none;
+    }
+
+}
 
 
 
@@ -149,7 +191,7 @@ header > nav > ul > li{
 }
 
 .accueil button{
-    padding: 7px 35px;
+    padding: 10px 50px;
     background-color: black;
     border: 1px solid black;
     color: white;
@@ -162,68 +204,67 @@ header > nav > ul > li{
     transition: 0.4s;
 }
 
+.accueil > *{
+    margin: 20px;
+}
 
-
-
-
-
-
-/* Infos */
-
-.infos{
-    height: 160vh;
+.infos {
     background-color: white;
-    padding: 12% 20%;
+    padding: 6% 12%;
+    padding-bottom: 100px;
 }
 
-.un{
+.infos > div {
     display: flex;
-    height: 58%;
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser lorsqu'ils sont trop larges */
 }
 
-.deux{
+.un, .deux {
     display: flex;
-    align-items: center;
-    height: 42%;
+    width: 100%; /* Assurez-vous que chaque div prenne toute la largeur de leur parent */
+    flex-direction: row; /* Maintient la direction des éléments en ligne pour les grandes tailles d'écran */
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-.image img{
-    width: 400px;
+.un {
+    height: auto; /* Enlever la hauteur fixe pour laisser les éléments grandir de manière flexible */
+}
+
+.deux {
+    flex-direction: column; /* Sur les petits écrans, les divs passent en colonne */
+    align-items: stretch; /* Permet à chaque div de s'étirer pour occuper l'espace disponible */
+}
+
+.image img {
+    width: 100%; /* Ajuste la largeur de l'image à 100% de son conteneur */
+    max-width: 400px; /* Limite la largeur max de l'image */
     box-shadow: 6px 6px 6px grey;
 }
 
-.infos-pratiques{
+.infos-pratiques {
     background-color: rgb(236, 236, 236);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2%;
     text-align: center;
+    flex-grow: 1; /* Permet à cette section de s'étirer si nécessaire */
+    margin-bottom: 10px; /* Sépare un peu les sections */
 }
 
-.infos-pratiques > *{
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.horaires{
-    width: 50%;
-    height: 70%;
+.horaires {
+    width: 100%;
     border: 1px solid black;
-    border-left: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 0;
+    margin-top: 10px;
+    flex-grow: 1;
 }
 
-.horaires > *{
-    margin: 5px;
-}
-
-.horaires-display{
+.horaires-display {
     display: flex;
     align-items: center;
     border-bottom: dotted 1px lightgrey;
@@ -232,12 +273,27 @@ header > nav > ul > li{
     justify-content: space-between;
 }
 
-.image, .titre, .infos-pratiques{
-    width: 50%;
+.image, .titre, .infos-pratiques {
+    width: 100%; /* S'assure que chaque section prend 100% de la largeur de son conteneur */
+    text-align: center;
 }
 
+@media (max-width: 1400px) {
+    .un, .deux {
+        flex-direction: column;
+        width: 100%;
+    }
 
+    .horaires {
+        width: 100%; /* Assurez-vous que les horaires s'étendent sur toute la largeur disponible */
+        border: 1px solid black;
+        border-top: none; /* Retire la bordure supérieure */
+    }
 
+    .infos-pratiques {
+        width: 100%; /* Ajuste la largeur de la section des infos pratiques */
+    }
+}
 
 
 
@@ -283,22 +339,16 @@ header > nav > ul > li{
 
 
 
-
-
-
-
-
-
-
 /* Photos */
 
 .photos {
-    height: 140vh; 
+    height: 120vh; 
     background-color: white;
-    padding: 10% 15%;
+    padding: 7% 15%;
     display: flex;
     flex-direction: column; 
     align-items: center; 
+    justify-content: center;
 }
 
 .container {
@@ -345,8 +395,11 @@ header > nav > ul > li{
 }
 
 
-
-
+@media (max-width: 1000px){
+    .marge{
+        display: none !important;
+    }
+}
 
 
 
@@ -381,8 +434,13 @@ form > div{
 
 form > div > *{
     flex-grow: 1;
+    margin: 10px;
     padding: 10px;
     gap: 10px;
+}
+
+input[type="submit"], textarea{
+    margin: 20px;
 }
 
 
@@ -400,7 +458,15 @@ input[type="submit"]:hover{
     transition: 0.4s;
 }
 
+@media (max-width: 1000px){
+    .contact{
+        height: auto;
+    }
 
+    form > div{
+        flex-direction: column;
+    }
+}
 
 
 
@@ -411,6 +477,9 @@ input[type="submit"]:hover{
     height: 50vh;
     overflow: hidden;
 }
+
+
+
 
 
 
@@ -446,4 +515,23 @@ footer > div > * {
     background-color: black;
     color: white;
     transition: 0.4s;
+}
+
+.fa-brands{
+    height: 100%;
+}
+
+@media (max-width: 1000px){
+    footer{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
